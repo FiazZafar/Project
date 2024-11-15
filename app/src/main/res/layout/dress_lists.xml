@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/list_items"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_img"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/item_img2" />
+
+            <LinearLayout
+                android:id="@+id/contentLinearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/item_img"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:id="@+id/item_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/item_img"
+                            android:layout_marginTop="10dp"
+                            android:text="Name: "
+                            android:textStyle="bold"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/item_name_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/item_img"
+                            android:layout_marginTop="10dp"
+                            android:text=" Items"
+                            android:paddingStart="4dp"
+
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   >
+                   <TextView
+                       android:id="@+id/priceId"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@+id/item_name"
+
+                       android:layout_marginTop="5dp"
+                       android:text="Price:"
+                       android:textStyle="bold"
+
+                       />
+
+                   <TextView
+                       android:id="@+id/priceIdInteger"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@+id/item_name_text"
+                       android:layout_marginTop="5dp"
+                       android:text="1500"
+                       android:paddingStart="4dp"
+                       android:textStyle="bold" />
+
+               </LinearLayout>
+                </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_gravity="center_vertical"
+                    android:gravity="end"
+                   android:padding="10dp"
+                   >
+
+                   <androidx.appcompat.widget.AppCompatButton
+                       android:id="@+id/minusBtn"
+                       android:layout_width="20dp"
+                       android:layout_height="20dp"
+                       android:layout_below="@+id/item_img"
+                       android:layout_alignParentEnd="true"
+                       android:background="@drawable/plus_minus_bg_shape"
+                       android:text="-" />
+
+
+                   <TextView
+                       android:id="@+id/item_quantity"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="1"
+                       android:layout_marginStart="5dp"
+                       android:layout_marginEnd="5dp"
+                       android:layout_below="@id/item_img"
+                       android:layout_alignParentEnd="true" />
+                   <androidx.appcompat.widget.AppCompatButton
+                       android:id="@+id/plusBtn"
+                       android:layout_width="20dp"
+                       android:layout_height="20dp"
+                       android:layout_below="@+id/item_img"
+                       android:layout_alignParentEnd="true"
+                       android:background="@drawable/plus_minus_bg_shape"
+                       android:text="+" />
+
+               </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLinearLayout"
+                android:orientation="horizontal"
+                android:layout_below="@+id/contentLinearlayout"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="20dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addToCartBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_shape"
+                    android:text="Add To Cart"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="visible"
+                    android:layout_gravity="end"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

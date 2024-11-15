@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Purchase_Item">
+
+    <TextView
+        android:id="@+id/purchasedItemHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recently Purchased"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/purchasedItemRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/purchasedItemHeading"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/emptyMessagetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="List is empty "
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        />
+
+
+</RelativeLayout>
